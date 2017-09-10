@@ -15,6 +15,10 @@ namespace lab2
 			Console.WriteLine("fjkgkdhg");
 			Console.ReadKey ();
 		}
+		public static void Anton(){
+			Console.WriteLine("Hallo Anton");
+			Console.ReadKey ();
+		}
 
 	}
 }

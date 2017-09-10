@@ -17,12 +17,19 @@ namespace OOP_Labs
 			String select_item = BootstrapMenu (folders,"Exit","Select Folder");
 			if (select_item != "Exit") {
 				string path_to_lib = select_item+"//bin//Debug//";
-				String[] files = Directory.GetFiles (path_to_lib,"*.dll");
-				String curr_file = BootstrapMenu (files,"Back","Select DLL:");
-				if (curr_file == "Back") {
-					BootstrapMenu (folders);
-				} else {
-					LoadDll (curr_file);
+				try{
+					String[] files = Directory.GetFiles (path_to_lib,"*.dll");
+					String curr_file = BootstrapMenu (files,"Back","Select DLL:");
+
+					if (curr_file == "Back") {
+						BootstrapMenu (folders);
+					} else {
+						LoadDll (curr_file);
+					}
+				}catch(Exception ex){
+					Console.WriteLine ("DLL NOT FOUND: "+ex.Message);
+					Console.ReadKey ();
+					show_main_screen ();
 				}
 			}
 		}
@@ -30,7 +37,7 @@ namespace OOP_Labs
 		public String[] ProjectFolders(){
 			String[] ret;
 			try{
-				ret = Directory.GetDirectories (this.PROJ_PATH);
+				ret = Directory.GetDirectories (this.PROJ_PATH,"lab*");
 				return ret;
 			}catch(DirectoryNotFoundException ex){
 				Console.WriteLine (ex.Message);

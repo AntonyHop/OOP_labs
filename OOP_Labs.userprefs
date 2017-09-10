@@ -1,6 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OOP_Labs/Menu.cs">
+    <Files>
+      <File FileName="lab1/WorkWithFiles.cs" Line="6" Column="3" />
+      <File FileName="OOP_Labs/Menu.cs" Line="40" Column="59" />
+      <File FileName="lab2/MyClass.cs" Line="8" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
